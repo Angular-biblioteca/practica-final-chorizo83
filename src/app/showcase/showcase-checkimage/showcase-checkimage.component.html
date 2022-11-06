@@ -1,0 +1,108 @@
+<base-showcase [showOutputs]="false">
+<div examples>
+<div class="row">
+  <div class="col-12">
+
+    <div class="row">
+      <div class="col-12">
+        <p>El objetivo de este componente es mostrar una imagen por defecto si no encuentra la imagen</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">        
+        <span class="example_title">Ejemplo 1: Imágen encontrada</span>
+        <img class="example_img" ddrCheckImage src="./assets/img/imagen-ref.jpeg" [rutaImagenDefecto]="'./assets/img/imagen-not-found.png'" alt="" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">        
+        <span class="example_title">Ejemplo 2: Imágen no encontrada</span>
+        <img class="example_img" ddrCheckImage src="./assets/img/book-menu2.png" [rutaImagenDefecto]="'./assets/img/imagen-not-found.png'" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  <div code>
+    <ddr-tabs>
+      <ddr-tab-item title="HTML">
+        <pre><code class="language-markup" pCode ngNonBindable> &lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-12&quot;&gt;
+
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-12&quot;&gt;
+        &lt;span class=&quot;example_title&quot;&gt;Ejemplo 1: Imágen encontrada&lt;/span&gt;
+        &lt;img class=&quot;example_img&quot; ddrCheckImage src=&quot;./assets/img/imagen-ref.jpeg&quot; [rutaImagenDefecto]=&quot;'./assets/img/imagen-not-found.png'&quot; &gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-12&quot;&gt;
+        &lt;span class=&quot;example_title&quot;&gt;Ejemplo 2: Imágen no encontrada&lt;/span&gt;
+        &lt;img class=&quot;example_img&quot; ddrCheckImage src=&quot;./assets/img/book-menu2.png&quot; [rutaImagenDefecto]=&quot;'./assets/img/imagen-not-found.png'&quot; &gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </ddr-tab-item>
+      
+      <ddr-tab-item title="CSS">
+        <pre><code class="language-css" pCode ngNonBindable></code></pre>
+      </ddr-tab-item>
+      
+      <ddr-tab-item title="TS">
+        <pre><code class="language-typescript" pCode ngNonBindable>import &#123; DdrCacheService &#125; from './../../services/ddr-cache.service';
+import &#123; Component &#125; from '@angular/core';
+
+@Component(&#123;
+  selector: 'app-showcase-checkimage',
+  templateUrl: './showcase-checkimage.component.html',
+  styleUrls: ['./showcase-checkimage.component.scss']
+&#125;)
+export class ShowcaseCheckimageComponent &#123;
+
+  public mode: string;
+
+  constructor(
+    private ddrCache: DdrCacheService
+  ) &#123;
+    this.ddrCache.setElement('title', 'clickoutside');
+    this.mode = 'estandar';
+  &#125;
+
+  openEstandar() &#123;
+    this.mode = 'estandar';
+  &#125;
+
+&#125;</code></pre>
+      </ddr-tab-item>
+    </ddr-tabs>
+  </div>
+
+  <div class="scrollable" inputs>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Tipo</th>
+          <th>Valor por defecto</th>
+          <th>Posibles valores</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>rutaImagenDefecto</td>
+          <td>Enviar la ruta de la imagen por defecto.</td>
+          <td>string</td>
+          <td>''</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</base-showcase>

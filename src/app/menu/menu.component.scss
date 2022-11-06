@@ -1,0 +1,129 @@
+.ddr-menu {
+    .sidebar {
+        background: #e0e0e0;
+        height: 100vh;
+        float: left;
+        text-align: center;
+        max-width: 60px;
+        overflow: hidden;
+        position: relative;
+        border-right: 0.1px solid #525252;
+        div {
+            cursor: pointer;
+            img{
+                width: 30px;
+            }
+            &.logo-npm{
+                img {
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+    .logo {
+        padding: 6.5px 9px;
+        border-bottom: 0.1px solid #5e5e5e;
+    }
+
+    .logo-npm{
+        position: absolute;
+        bottom: 30px;
+        left: 15%;
+    }
+
+    .logo-theme{
+        position: absolute;
+        bottom: 80px;
+        left: 15%;
+    }
+
+
+    .main{
+        float: left;
+        width: calc(100% - 60px);
+        height: 100vh;
+    }
+
+    .main-bar{
+        height: 40px;
+        background: #e0e0e0;
+        text-align: center;
+        color: #1ba68a;
+        box-shadow: 0px 2px 5px #00000063;
+        padding-top: 6px;
+        font-family: "ddr bold";
+        font-size: 20px;
+    }
+
+    .main-content{
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: relative;
+        padding: 25px;
+    }
+
+    .detail-menu-items{
+        .ddr-detail{
+            position: absolute;
+            width: 100%;
+            background: #bebebe;
+            color: #01342a;
+        }   
+    }
+
+    .menu-items {
+
+        position: fixed;
+        width: calc(100% - 80px);
+        height: calc(100% - 70px);
+
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+
+
+    .menu-item {
+        border: .5px solid #01342a4a;
+        border-radius: 2px;
+        margin: 10px;
+        box-shadow: 2px 2px 5px #00000014;
+        margin-left: 0px;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: #cccccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            color: #eee;
+            background: #726f6f;
+        }
+    }
+
+
+    .input-group{
+
+        input{
+            border-radius: 4px !important;
+            outline: 0px;
+            &:focus{
+                outline: 0px !important;
+                box-shadow: none !important;
+            }
+        }
+        button{
+            height: 100%;
+            width: 32px;
+            background-color: transparent;
+            border-color: transparent;
+            position: absolute;
+            right: 0px;
+            z-index: 999;
+        }
+    }
+
+
+}

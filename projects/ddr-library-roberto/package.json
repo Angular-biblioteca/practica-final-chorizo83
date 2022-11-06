@@ -1,0 +1,21 @@
+{
+  "name": "ddr-library-roberto",
+  "version": "12.11.1",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0"
+  },
+  "author": {
+    "email": "robertoarnau83@gmail.com",
+    "name": "Roberto Arnau",
+    "url": "https://github.com/chorizo83"
+  },
+  "description": "Biblioteca de componentes cuso librerías dedesde --> disco duro de roer",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "font-awesome": "^4.7.0",
+    "lodash-es": "^4.17.0",
+    "ngx-pagination": "^5.1.1",
+    "tslib": "^2.3.0"
+  }
+}
